@@ -5,32 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feminine Seduction Type Quiz</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-        .quiz-container { max-width: 500px; margin: auto; }
+        body { font-family: Arial, sans-serif; margin: 20px; }
         .hidden { display: none; }
     </style>
 </head>
 <body>
-    <div class="quiz-container">
-        <h2>What's Your Feminine Seduction Type? 💕</h2>
-        <form id="quizForm">
-            <h3>1. How do you approach dating?</h3>
-            <label><input type="radio" name="q1" value="Femme Fatale">Flirty is my middle name..</label><br>
-            <label><input type="radio" name="q1" value="Girl Next Door">I make sure, I'm warm and welcoming. I smile and ask questions about them.</label><br>
-            <label><input type="radio" name="q1" value="Princess">I wait for the right kind of a man to make his move.</label><br>
-            
-            <h3>2. What's your ideal first date?</h3>
-            <label><input type="radio" name="q2" value="Femme Fatale"> A passionate, deep conversation over wine</label><br>
-            <label><input type="radio" name="q2" value="Girl Next Door"> A cozy coffee date</label><br>
-            <label><input type="radio" name="q2" value="Princess"> A luxury dinner with candlelight</label><br>
-            
-            <button type="button" onclick="calculateResult()">See Your Result</button>
-        </form>
+    <h1>What's Your Feminine Seduction Type?</h1>
+    <form id="quiz-form">
+        <h3>1. How do you approach dating?</h3>
+        <input type="radio" name="q1" value="femme_fatale"> Strategically<br>
+        <input type="radio" name="q1" value="girl_next_door"> By being warm and happy<br>
+        <input type="radio" name="q1" value="princess"> Waiting for the right kind of a man to make his move<br>
 
-        <div id="emailSection" class="hidden">
-            <p>...</p>
-            <h3>Enter Your Email to See Your Result ✨</h3>
-<div id="mc_embed_shell">
+        <h3>2. Your ideal date is...</h3>
+        <input type="radio" name="q2" value="princess"> A luxurious candlelit dinner, evening at an event or a theater play<br>
+        <input type="radio" name="q2" value="girl_next_door"> A fun day at an amusement park, cozy coffee or a movie with candy<br>
+        <input type="radio" name="q2" value="femme_fatale"> A passionate, deep conversation over wine in the darkest corner of a restaurant<br>
+
+    <h3>3. How do you usually attract someone you like?</h3>
+    <input type="radio" name="q3" value="femme_fatale"> With intense eye contact and mysterious aura<br>
+    <input type="radio" name="q3" value="princess"> By being elegant, graceful, and slightly unattainable<br>
+    <input type="radio" name="q3" value="girl_next_door"> Through friendliness, warmth, and effortless charm<br>
+
+    <h3>4. What is your signature outfit for a date?</h3>
+    <input type="radio" name="q4" value="girl_next_door"> Cute and comfortable clothes, like a flowy flowery dress, with natural makeup<br>
+    <input type="radio" name="q4" value="femme_fatale"> Body-hugging figure with sexy makeup and heels<br>
+    <input type="radio" name="q4" value="princess"> A classy, designer piece with refined accessories<br>
+
+    <h3>5. How do you react to a man pulling away?</h3>
+    <input type="radio" name="q5" value="princess"> You gracefully distance yourself, knowing your worth<br>
+    <input type="radio" name="q5" value="girl_next_door"> You try to get clarity and understand what’s going on<br>
+    <input type="radio" name="q5" value="femme_fatale"> You make yourself even more intriguing and make him chase you<br>
+
+    <h3>6. What’s your idea of femininity?</h3>
+    <input type="radio" name="q6" value="femme_fatale"> A woman who is seductive, magnetic, and a challenge to a man<br>
+    <input type="radio" name="q6" value="girl_next_door"> A woman who is kind, down-to-earth, and easy to be around<br>
+    <input type="radio" name="q6" value="princess"> A woman who is high-value, charming and admired by many<br>
+
+    <h3>7. How do you handle conflicts in relationships?</h3>
+    <input type="radio" name="q7" value="girl_next_door"> You openly communicate and try to solve the problem together<br>
+    <input type="radio" name="q7" value="femme_fatale"> You stay in control and make sure you are never emotionally vulnerable<br>
+    <input type="radio" name="q7" value="princess"> You set firm boundaries and expect respect at all times<br>
+
+    <h3>8. What’s your view on commitment and relationships?</h3>
+    <input type="radio" name="q8" value="princess"> You want a power couple status where both bring the best<br>
+    <input type="radio" name="q8" value="girl_next_door"> You believe in love that is built on friendship and emotional closeness<br>
+    <input type="radio" name="q8" value="femme_fatale"> You enjoy romance and passion but value your independence<br>
+
+    <h3>9. How do you want a man to treat you?</h3>
+    <input type="radio" name="q9" value="femme_fatale"> With deep admiration, desire, and a servient mindset<br>
+    <input type="radio" name="q9" value="princess"> Like a queen—he must prove himself worthy of you<br>
+    <input type="radio" name="q9" value="girl_next_door"> With kindness, humor, and everyday romantic gestures<br>
+
+    <h3>10. If you had to choose a Gossip Girl character that represents your vibe, who would it be?</h3>
+    <input type="radio" name="q10" value="girl_next_door"> Vanessa Abrams – good-hearted, relatable, creative and smart<br>
+    <input type="radio" name="q10" value="femme_fatale"> Blair Waldorf – seductive, strategic, ruthless, and powerful<br>
+    <input type="radio" name="q10" value="princess"> Serena Van Der Woodsen – elegant, fun, ambitious, and luxurious<br>
+
+        
+        <button type="button" onclick="calculateResult()">Get My Results</button>
+    </form>
+
+    <div id="email-form" class="hidden">
+        <h2>Enter Your Email to See Your Result</h2>
+        <div id="mc_embed_shell">
+            <div id="mc_embed_shell">
       <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
   <style type="text/css">
         #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
@@ -62,41 +101,39 @@
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
 
         </div>
+    </div>
 
-        <div id="result" class="hidden">
-            <h3>Your Feminine Seduction Type is: <span id="resultType"></span> 💖</h3>
-            <p>Learn more about your type in my exclusive email series! 🌟</p>
-        </div>
+    <div id="results" class="hidden">
+        <h2>Your Feminine Seduction Type Is...</h2>
+        <p id="result-text"></p>
     </div>
 
     <script>
-        let selectedType = "";
-
         function calculateResult() {
-            const answers = document.querySelectorAll('input[type="radio"]:checked');
-            if (answers.length < 2) {
-                alert("Please answer all questions!");
-                return;
-            }
-
-            let counts = { "Femme Fatale": 0, "Girl Next Door": 0, "Princess": 0 };
-            answers.forEach(ans => counts[ans.value]++);
-            selectedType = Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b);
-
-            document.getElementById("quizForm").classList.add("hidden");
-            document.getElementById("emailSection").classList.remove("hidden");
-        }
-
-        function showResult() {
-            let email = document.getElementById("email").value;
-            if (!email.includes("@")) {
-                alert("Please enter a valid email!");
-                return;
-            }
-
-            document.getElementById("emailSection").classList.add("hidden");
-            document.getElementById("result").classList.remove("hidden");
-            document.getElementById("resultType").textContent = selectedType;
+            let scores = { femme_fatale: 0, girl_next_door: 0, princess: 0 };
+            document.querySelectorAll('input[type=radio]:checked').forEach(input => {
+                scores[input.value]++;
+            });
+            
+            let maxScore = Math.max(scores.femme_fatale, scores.girl_next_door, scores.princess);
+            let result = Object.keys(scores).filter(key => scores[key] === maxScore);
+            
+            let finalType = result.length > 1 ? "Chameleon" : result[0];
+            let descriptions = {
+                femme_fatale: "You embody the Dark Feminine – alluring, mysterious, and deeply captivating.",
+                girl_next_door: "You are the classic approachable woman – kind, warm, and effortlessly charming.",
+                princess: "Luxury, elegance, and high standards define you. You are the embodiment of elite femininity.",
+                chameleon: "You can be anyone. People project their fantasies onto you because you are adaptable and unreadable."
+            };
+            
+            document.getElementById("quiz-form").classList.add("hidden");
+            document.getElementById("email-form").classList.remove("hidden");
+            
+            document.getElementById("mc_embed_shell").addEventListener("submit", function() {
+                document.getElementById("email-form").classList.add("hidden");
+                document.getElementById("results").classList.remove("hidden");
+                document.getElementById("result-text").textContent = descriptions[finalType];
+            });
         }
     </script>
 </body>
