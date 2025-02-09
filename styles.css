@@ -1,0 +1,60 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:wght@400;700&display=swap');
+
+/* Global styles */
+body {
+    background: url('background-image.png') no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+    font-family: 'Lora', serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Title styling */
+h1, h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+}
+
+/* Button styling */
+button {
+    background-color: #C8A2C8; /* Lavender */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Lora', serif;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #B583B4; /* Slightly darker lavender */
+    transform: scale(1.05);
+}
+
+/* Form inputs */
+input[type="radio"], input[type="email"] {
+    margin: 10px;
+}
+
+input[type="email"] {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+/* Mailchimp form */
+#mc_embed_signup {
+    background: rgba(255, 255, 255, 0.1); /* Slight transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+}
