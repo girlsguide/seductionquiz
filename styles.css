@@ -53,7 +53,7 @@ input[type="email"] {
 
 /* Mailchimp form */
 #mc_embed_signup {
-    background: rgba(255, 255, 255, 0.1); /* Slight transparent white */
+    background-color: black;
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
