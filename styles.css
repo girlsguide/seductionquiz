@@ -5,7 +5,9 @@
 body {
     background: url('background-image.png') no-repeat center center fixed;
     background-size: cover;
-    color: black;
+    color: white;
+    background-color: black;
+    opacity: 0.3;
     font-family: 'Lora', serif;
     text-align: center;
     margin: 0;
