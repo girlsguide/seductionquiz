@@ -13,7 +13,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             let params = new URLSearchParams(window.location.search);
             let result = params.get("quizResult");
-            document.getElementById("quizResult").innerText = result || "Error: No result found.";
+            document.getElementById("result-text").innerText = result || "Error: No result found.";
         });
     </script>
 </body>
