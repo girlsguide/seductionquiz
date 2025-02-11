@@ -18,21 +18,12 @@
     </div>
 
     <script>
-        function handleEmailSubmit(event) {
-    event.preventDefault();
-/    localStorage.setItem("finalType", finalType); // Tallennetaan tulos
-    document.getElementById("email-form").classList.add("hidden");
-    document.getElementById("results").classList.remove("hidden");
-    document.getElementById("result-text").innerText = finalType ? document.getElementById("result-text").innerText : "Error: No result found.";
-    window.location.href = "result.html"; // Siirrytään tulossivulle
-}
-
-    /*   function redirectToResults(event) {
+function redirectToResults(event) {
             event.preventDefault();
             setTimeout(() => {
                 window.location.href = 'results.html';
             }, 2000); 
-        }*/
+        }
     </script>
 </body>
 </html>
