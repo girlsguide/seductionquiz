@@ -7,7 +7,6 @@
     <title>Feminine Seduction Type Quiz</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
-        .hidden { display: none; }
     </style>
 </head>
 <body>
@@ -22,7 +21,7 @@
         <input type="radio" name="q2" value="princess"> A luxurious candlelit dinner, evening at an event or a theater play<br>
         <input type="radio" name="q2" value="girl_next_door"> A fun day at an amusement park, cozy coffee or a movie with candy<br>
         <input type="radio" name="q2" value="femme_fatale"> A passionate, deep conversation over wine in the darkest corner of a restaurant<br>
-
+        
     <h3>3. How do you usually attract someone you like?</h3>
     <input type="radio" name="q3" value="femme_fatale"> With intense eye contact and mysterious aura<br>
     <input type="radio" name="q3" value="princess"> By being elegant, graceful, and slightly unattainable<br>
@@ -61,30 +60,12 @@
     <h3>10. If you had to choose a Gossip Girl character that represents your vibe, who would it be?</h3>
     <input type="radio" name="q10" value="girl_next_door"> Vanessa Abrams – good-hearted, relatable, creative and smart💄<br>
     <input type="radio" name="q10" value="femme_fatale"> Blair Waldorf – seductive, strategic, ruthless, and powerful🥂<br>
-    <input type="radio" name="q10" value="princess"> Serena Van Der Woodsen – elegant, fun, ambitious, and luxurious✨<br>
-        <button type="button" onclick="calculateResult()">Get My Results</button>
+    <input type="radio" name="q10" value="princess"> Serena Van Der Woodsen – elegant, fun, ambitious, and luxurious✨<br>        
+        <button type="button" onclick="submitQuiz()">Get My Results</button>
     </form>
 
-    <div id="email-form" class="hidden">
-        <h2>Enter Your Email to See Your Result</h2>
-        <div id="mc_embed_signup">
-            <form action="https://gmail.us9.list-manage.com/subscribe/post?u=c90515d4ee95f676d75c694f5&amp;id=e1ae15acd7&amp;f_id=00220de1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" onsubmit="handleEmailSubmit(event)">
-                <div class="mc-field-group">
-                    <label for="mce-EMAIL">Email <span class="asterisk">*</span></label>
-                    <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="">
-                </div>
-                <input type="submit" value="Subscribe">
-            </form>
-        </div>
-    </div>
-
-    <div id="results" class="hidden">
-        <h2>Your Feminine Seduction Type Is...</h2>
-        <p id="result-text"></p>
-    </div>
-
     <script>
-        function calculateResult() {
+        function submitQuiz() {
             let scores = { femme_fatale: 0, girl_next_door: 0, princess: 0 };
             document.querySelectorAll('input[type=radio]:checked').forEach(input => {
                 scores[input.value]++;
@@ -96,30 +77,13 @@
             let finalType = result.length > 1 ? "Chameleon" : result[0];
             let descriptions = {
                 femme_fatale: "You embody the Dark Feminine – alluring, mysterious, and deeply captivating.",
-                girl_next_door: "You are the classic approachable woman – kind, warm, and effortlessly charming.",
-                princess: "Luxury, elegance, and high standards define you. You are the embodiment of elite femininity.",
-                chameleon: "You can be anyone. People project their fantasies onto you because you are adaptable and unreadable."
+                girl_next_door: "You are the warm, friendly, and effortlessly charming woman everyone loves.",
+                princess: "You exude elegance, grace, and high value in all areas of your life.",
+                Chameleon: "You have a unique blend of all three styles, adapting effortlessly!"
             };
-
-            document.getElementById("result-text").innerText = descriptions[finalType];
-            document.getElementById("results").classList.remove("hidden");
-            document.getElementById("email-form").classList.remove("hidden");
-        }
-
-        function handleEmailSubmit(event) {
-            event.preventDefault(); // Prevents form from submitting and redirecting
-            let email = document.getElementById('mce-EMAIL').value;
-            if (email && validateEmail(email)) {
-                document.getElementById('mc-embedded-subscribe-form').submit();
-                alert("Thank you for subscribing! Your result is shown above.");
-            } else {
-                alert("Please enter a valid email address.");
-            }
-        }
-
-        function validateEmail(email) {
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailPattern.test(email);
+            
+            localStorage.setItem('quizResult', JSON.stringify({ type: finalType, description: descriptions[finalType] }));
+            window.location.href = 'email.html';
         }
     </script>
 </body>
