@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Email</title>
+</head>
+<body>
+    <h2>Enter Your Email to See Your Result</h2>
+    <div id="mc_embed_signup">
+        <form action="https://gmail.us9.list-manage.com/subscribe/post?u=c90515d4ee95f676d75c694f5&amp;id=e1ae15acd7&amp;f_id=00220de1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" onsubmit="redirectToResults(event)">
+            <div class="mc-field-group">
+                <label for="mce-EMAIL">Email <span class="asterisk">*</span></label>
+                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required>
+            </div>
+            <input type="submit" value="Subscribe">
+        </form>
+    </div>
+
+    <script>
+        function redirectToResults(event) {
+            event.preventDefault();
+            setTimeout(() => {
+                window.location.href = 'results.html';
+            }, 2000); 
+        }
+    </script>
+</body>
+</html>
