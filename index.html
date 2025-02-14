@@ -76,10 +76,10 @@
             
             let finalType = result.length > 1 ? "Chameleon" : result[0];
             let descriptions = {
-                femme_fatale: "You embody the Dark Feminine – alluring, mysterious, and deeply captivating.",
-                girl_next_door: "You are the warm, friendly, and effortlessly charming woman everyone loves.",
-                princess: "You exude elegance, grace, and high value in all areas of your life.",
-                Chameleon: "You have a unique blend of all three styles, adapting effortlessly!"
+                femme_fatale: "Femme Fatale: You embody the Dark Feminine – alluring, mysterious, and deeply captivating.",
+                girl_next_door: "Girl Next Door: You are the warm, friendly, and effortlessly charming woman everyone loves.",
+                princess: " The Princess: You exude elegance, grace, and high value in all areas of your life.",
+                Chameleon: "The Chameleon: You have a unique blend of all three styles, adapting effortlessly!"
             };
             
             localStorage.setItem('quizResult', JSON.stringify({ type: finalType, description: descriptions[finalType] }));
