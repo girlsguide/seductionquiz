@@ -16,7 +16,7 @@
 
             if (storedResult) {
                 let resultData = JSON.parse(storedResult); // Muuntaa JSON-muotoisen merkkijonon objektiksi
-                document.getElementById("result-text").innerText = `You are the archetype: ${resultData.description}`;
+                document.getElementById("result-text").innerText = `${resultData.description}`;
             } else {
                 document.getElementById("result-text").innerText = "Error: No result found.";
             }
