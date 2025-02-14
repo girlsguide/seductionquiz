@@ -75,12 +75,47 @@
             let result = Object.keys(scores).filter(key => scores[key] === maxScore);
             
             let finalType = result.length > 1 ? "Chameleon" : result[0];
-            let descriptions = {
-                femme_fatale: "Femme Fatale: You embody the Dark Feminine – alluring, mysterious, and deeply captivating.",
-                girl_next_door: "Girl Next Door: You are the warm, friendly, and effortlessly charming woman everyone loves.",
-                princess: " The Princess: You exude elegance, grace, and high value in all areas of your life.",
-                Chameleon: "The Chameleon: You have a unique blend of all three styles, adapting effortlessly!"
-            };
+let descriptions = {
+    femme_fatale: `
+        **Femme Fatale:** You embody the Dark Feminine – alluring, mysterious, and deeply captivating.
+        *Strengths:* Magnetic, intense, mysterious, sexually confident.  
+        *Weaknesses:* Can be intimidating, emotionally detached, attracts power struggles. Inability for intimacy.  
+        *Best Targets:* Powerful, ambitious men who enjoy a challenge.  
+        *Seduction Style:* Deep eye contact, slow movements, controlled speech, power games.  
+        *Common Mistakes:* Overplaying the mystery, making him feel unworthy, being too emotionally unavailable.  
+        *Example:* Angelina Jolie, Megan Fox, Blair Waldorf.
+    `,
+
+    girl_next_door: `
+        **Girl Next Door:** You are the warm, friendly, and effortlessly charming woman everyone loves.  
+        *Strengths:* Approachable, kind-hearted, easy to talk to, playful.  
+        *Weaknesses:* Can be seen as too "safe," lacks mystery, may struggle with boundaries.  
+        *Best Targets:* Men who seek emotional connection, long-term commitment, and comfort.  
+        *Seduction Style:* Natural charm, open and warm body language, spontaneous fun.  
+        *Common Mistakes:* Being too predictable, friend-zoning herself, not standing out enough.  
+        *Example:* Jennifer Aniston, Emma Stone, Vanessa Abrams.
+    `,
+
+    princess: `
+        **The Princess:** You exude elegance, grace, and high value in all areas of your life.  
+        *Strengths:* Refined, sophisticated, high standards, feminine.  
+        *Weaknesses:* Can appear entitled, high-maintenance, or overly selective.  
+        *Best Targets:* Men who love to provide, traditional gentlemen, high-status suitors.  
+        *Seduction Style:* Poise, charm, selective attention, letting the man prove himself.  
+        *Common Mistakes:* Expecting too much too soon, coming across as cold, pushing away good men.  
+        *Example:* Grace Kelly, Audrey Hepburn, Serena Van Der Woodsen.
+    `,
+
+    chameleon: `
+        **The Chameleon:** You have a unique blend of all three styles, adapting effortlessly!  
+        *Strengths:* Versatile, intriguing, can adjust to any social situation.  
+        *Weaknesses:* May lack a clear identity, can feel emotionally inconsistent.  
+        *Best Targets:* Men who appreciate variety and unpredictability.  
+        *Seduction Style:* Adjusting to his preferences while maintaining mystery.  
+        *Common Mistakes:* Losing herself in the process, lacking a strong personal brand.  
+        *Example:* Margot Robbie, Rihanna, Scarlett Johansson.
+    `
+};
             
             localStorage.setItem('quizResult', JSON.stringify({ type: finalType, description: descriptions[finalType] }));
             window.location.href = 'email.html';
