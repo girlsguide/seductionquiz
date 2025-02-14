@@ -11,9 +11,15 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            let params = new URLSearchParams(window.location.search);
-            let result = params.get("quizResult");
-            document.getElementById("result-text").innerText = result || "Error: No result found.";
+            // Hakee quizin tuloksen localStorage-muistista
+            let storedResult = localStorage.getItem("quizResult");
+
+            if (storedResult) {
+                let resultData = JSON.parse(storedResult); // Muuntaa JSON-muotoisen merkkijonon objektiksi
+                document.getElementById("result-text").innerText = `You are the archetype: ${resultData.type}\n${resultData.description}`;
+            } else {
+                document.getElementById("result-text").innerText = "Error: No result found.";
+            }
         });
     </script>
 </body>
