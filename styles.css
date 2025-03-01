@@ -50,6 +50,12 @@ input[type="email"] {
     border: none;
     font-size: 1rem;
 }
+.responsive-image {
+    max-width: 100%;  /* Ensures the image never exceeds its container */
+    height: auto;  /* Keeps the aspect ratio */
+    display: block; /* Removes extra space below inline images */
+    margin: 0 auto; /* Centers the image */
+}
 
 /* Mailchimp form */
 #mc_embed_signup {
